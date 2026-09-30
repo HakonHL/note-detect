@@ -1,0 +1,15 @@
+FROM python:3.11.8-slim
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    TF_CPP_MIN_LOG_LEVEL=2
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        libsndfile1 \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /work
+COPY requirements-training.txt /tmp/requirements-training.txt
+RUN python -m pip install --no-cache-dir -r /tmp/requirements-training.txt
+
+ENTRYPOINT ["python", "train_chord_cnn.py"]

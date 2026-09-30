@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+dataset/
+dataset_voicings/
+dataset_notes/
+captures/
+artifacts/
+*.wav
+*.mid

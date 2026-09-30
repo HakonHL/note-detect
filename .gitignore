@@ -1,0 +1,29 @@
+# Python environments and caches
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Zephyr build outputs (including named build configurations)
+**/build/
+**/build_*/
+**/build-*/
+
+# Generated datasets, training outputs, and recordings
+/dataset/
+/dataset_notes/
+/dataset_voicings/
+/artifacts/
+/captures/
+/recordings/
+/firmware/
+/chords.zip
+
+# Local credentials and editor state
+.env
+.env.*
+!.env.example
+.vscode/
+*.log

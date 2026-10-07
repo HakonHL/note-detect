@@ -8,16 +8,6 @@ Overview
 
 This module processes audio input and extracts chroma features using FFT-based analysis. The implementation runs on the Axon NPU and supports both synchronous and asynchronous inference modes.
 
-Building
-********
-
-The module uses CMake for building:
-
-.. code-block:: bash
-
-   cmake -B build
-   make -C build
-
 Configuration
 *************
 
